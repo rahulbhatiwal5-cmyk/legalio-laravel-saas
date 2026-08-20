@@ -8,9 +8,9 @@ The platform also includes subscription management, one-time purchases, payment 
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-### 🤖 AI-Powered Document Generation
+### AI-Powered Document Generation
 
 * Generate legal document questionnaires dynamically.
 * Generate contract templates and document content using OpenAI.
@@ -21,7 +21,7 @@ The platform also includes subscription management, one-time purchases, payment 
 * Maintain previous AI outputs and generation context where required.
 * Support AI-generated clauses and standard clause analysis.
 
-### 📋 Dynamic Questionnaire Workflow
+### Dynamic Questionnaire Workflow
 
 Legalio uses a multi-step document generation workflow:
 
@@ -61,7 +61,7 @@ This allows different document types to have dynamic and flexible question flows
 
 ---
 
-## 📄 Document Generation
+## Document Generation
 
 The platform supports a complete legal document generation workflow.
 
@@ -92,7 +92,7 @@ Users can:
 
 ---
 
-## 🧠 OpenAI Integration
+## OpenAI Integration
 
 OpenAI is used as part of the document-generation workflow.
 
@@ -120,7 +120,7 @@ The platform also maintains generation logs and relevant AI response information
 
 ---
 
-## 📥 Document Import / AI Bypass Workflow
+## Document Import / AI Bypass Workflow
 
 Legalio includes an admin-side document import workflow that can be used to define documents without going through the normal AI generation process.
 
@@ -158,7 +158,7 @@ This provides an alternative workflow for documents whose questionnaire and cont
 
 ---
 
-## 💳 Payment & Subscription System
+## Payment & Subscription System
 
 Legalio supports both subscription-based and one-time payment workflows.
 
@@ -184,7 +184,7 @@ The application handles PayPal subscription lifecycle events and synchronizes su
 
 ---
 
-## 🔄 Subscription Workflow
+## Subscription Workflow
 
 A simplified subscription flow:
 
@@ -225,7 +225,7 @@ Subscription records maintain information such as:
 
 ---
 
-## 🎁 Free Trial
+## Free Trial
 
 Legalio includes a free-trial workflow.
 
@@ -241,7 +241,7 @@ The trial functionality is implemented as an application-level workflow rather t
 
 ---
 
-## 💰 Credits & Document Access
+##  Credits & Document Access
 
 The platform supports document credits and credit transactions.
 
@@ -263,7 +263,7 @@ Credits and subscription information are updated as part of successful payment/s
 
 ---
 
-## 👤 Authentication & User Management
+## Authentication & User Management
 
 Legalio includes secure authentication and user-related workflows.
 
@@ -279,7 +279,7 @@ Features include:
 
 ---
 
-## 🛠️ Admin Dashboard
+## Admin Dashboard
 
 The admin dashboard provides management functionality for the platform.
 
@@ -316,7 +316,7 @@ API credentials are configured through environment variables and are intentional
 
 ---
 
-## 🏗️ Technology Stack
+## Technology Stack
 
 ### Backend
 
@@ -369,7 +369,7 @@ API credentials are configured through environment variables and are intentional
 
 ---
 
-## 📁 High-Level Project Structure
+## High-Level Project Structure
 
 ```text
 legalio/
@@ -420,135 +420,7 @@ legalio/
 
 ---
 
-## 🔐 Environment Configuration
-
-Sensitive credentials should never be committed to the repository.
-
-Create a local `.env` file:
-
-```env
-APP_NAME=Legalio
-APP_ENV=local
-APP_KEY=
-APP_DEBUG=true
-APP_URL=http://localhost
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=legalio
-DB_USERNAME=root
-DB_PASSWORD=
-
-OPENAI_API_KEY=
-
-STRIPE_KEY=
-STRIPE_SECRET=
-STRIPE_WEBHOOK_SECRET=
-
-PAYPAL_CLIENT_ID=
-PAYPAL_CLIENT_SECRET=
-PAYPAL_MODE=sandbox
-```
-
-Use `.env.example` as the template for required environment variables.
-
-> Never commit `.env`, payment credentials, private keys, cloud service-account credentials, or other secrets to GitHub.
-
----
-
-## ⚙️ Local Installation
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/legalio-laravel-saas.git
-cd legalio-laravel-saas
-```
-
-### 2. Install PHP dependencies
-
-```bash
-composer install
-```
-
-### 3. Install frontend dependencies
-
-```bash
-npm install
-```
-
-### 4. Create environment file
-
-```bash
-cp .env.example .env
-```
-
-Configure the database and required API credentials in `.env`.
-
-### 5. Generate application key
-
-```bash
-php artisan key:generate
-```
-
-### 6. Run database migrations
-
-```bash
-php artisan migrate
-```
-
-If seed data is required:
-
-```bash
-php artisan db:seed
-```
-
-### 7. Build frontend assets
-
-For development:
-
-```bash
-npm run dev
-```
-
-For production build:
-
-```bash
-npm run build
-```
-
-### 8. Start Laravel development server
-
-```bash
-php artisan serve
-```
-
-The application will be available at:
-
-```text
-http://127.0.0.1:8000
-```
-
----
-
-## 🧪 Testing
-
-Run the Laravel test suite with:
-
-```bash
-php artisan test
-```
-
-or:
-
-```bash
-./vendor/bin/phpunit
-```
-
----
-
-## 🔄 Webhook Architecture
+## Webhook Architecture
 
 Payment providers communicate with the application through webhooks.
 
@@ -578,7 +450,7 @@ This allows the application to maintain payment and subscription state based on 
 
 ---
 
-## 📊 Core Application Concepts
+## Core Application Concepts
 
 Some of the important domain concepts in the application include:
 
@@ -608,7 +480,7 @@ This structure allows document generation, subscription access, credit managemen
 
 ---
 
-## 🎯 Main Business Workflow
+## Main Business Workflow
 
 The overall platform can be represented as:
 
@@ -657,7 +529,7 @@ The overall platform can be represented as:
 
 ---
 
-## 🔧 Architecture & Code Quality
+## Architecture & Code Quality
 
 The project follows Laravel's MVC approach and uses Laravel features such as:
 
@@ -677,7 +549,7 @@ The codebase is structured to keep presentation, business logic, validation, dat
 
 ---
 
-## 📌 Important Security Notes
+## Important Security Notes
 
 For security reasons, this repository should never contain:
 
@@ -695,7 +567,7 @@ Use environment variables and secret-management solutions instead.
 
 ---
 
-## 🚧 Portfolio Disclaimer
+## Portfolio Disclaimer
 
 This repository represents a portfolio-oriented implementation of an AI-powered legal document generation SaaS concept based on professional Laravel development experience.
 
@@ -716,7 +588,7 @@ No production credentials, private keys, customer data, or other confidential in
 
 ---
 
-## 👨‍💻 Developer
+## Developer
 
 **Rahul Prajapat**
 
@@ -744,7 +616,7 @@ Linux
 
 ---
 
-## ⭐ Project Highlights
+## Project Highlights
 
 * AI-powered legal document generation
 * Dynamic questionnaire engine
