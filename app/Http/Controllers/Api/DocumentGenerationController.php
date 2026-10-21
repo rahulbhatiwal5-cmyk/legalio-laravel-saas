@@ -16,51 +16,6 @@ use App\Events\DocumentCreated;
 
 class DocumentGenerationController extends Controller
 {
-    // public function startDocumentGeneration(Request $request){
-    //     // return $request->all();
-    //     try{    
-    //         $document = Document::find($request->document_id);
-    //         if(!$document){
-    //             $document = new Document();
-    //             $document->title = $request->document_name;
-    //             $document->slug = Str::slug($request->document_name); 
-    //             $document->save();
-    //         }
-    
-    //         $document_generator = DocumentGenerator::where('document_id', $request->document_id)->first() ?? new DocumentGenerator;
-    //         $document_generator->document_id = $document->id;
-    //         $document_generator->ai_status = 1; 
-    //         $document_generator->save();
-
-    //         $prompt = Prompt::where([['key','document_generator'],['location','document']])->first();
-    //         $ai_model = $prompt?->prompt_ai_model ?? '';
-    
-    //         GenerateDocumentJob::dispatch(
-    //             $document->id,
-    //             $document->title,
-    //             $document_generator->id,
-    //             $request->additional_information,
-    //             $request->fileInput,
-    //             $request->is_verified,
-    //             $ai_model
-    //         );
-    
-    //         return response()->json([
-    //             'status' => true,
-    //             'document_id' => $document->id,
-    //             'id' => $document_generator->id,
-    //             'ai_status' => $document_generator->ai_status,
-    //             'ai_model' => $ai_model,
-    //             'message' => 'Generation started. Please check status shortly.'
-    //         ]);
-    //     }catch(\Exception $e){
-    //         return response()->json([
-    //             'status' => false,
-    //             'message' => $e->getMessage()
-    //         ]);
-    //     }
-        
-    // }
 
     public function startDocumentGeneration(Request $request)
     {

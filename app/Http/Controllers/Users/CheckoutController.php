@@ -204,12 +204,10 @@ public function checkout(Request $request)
 
                         return view('users.checkout.thanku', compact('document'));
 
-                        // return redirect()->route('user.home');
                     }
 
                     return view('users.checkout.thanku');
 
-                    // return view('users.checkout.order_confirmation');
 
                 } else {
 
